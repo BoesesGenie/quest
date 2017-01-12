@@ -6,6 +6,6 @@ class Payments extends \SpaceWeb\Quest\QuestAbstract
 {
     public function getStat()
     {
-        
+        ;
     }
 }
