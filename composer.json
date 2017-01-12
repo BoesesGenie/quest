@@ -1,0 +1,14 @@
+{
+    "name": "kharlamov/quest",
+    "require": {
+        "spaceweb/quest": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\Base\\": "application/base/",
+            "Application\\Controller\\": "application/controller/",
+            "Application\\DAO\\": "application/dao/",
+            "Application\\View\\": "application/view/"
+        }
+    }
+}
