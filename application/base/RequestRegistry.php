@@ -3,12 +3,16 @@
 namespace Application\Base;
 
 /**
- * Класс-хранилище параметров пользовательского запроса
+ * Класс RequestRegistry - класс-хранилище параметров пользовательского запроса
+ *
+ * @author Константин Харламов <k.kharlamow@gmail.com>
+ * @package Application\Base
  */
 class RequestRegistry
 {
-    const ACTION_NAME = 'actionName';
-    
+    const ACTION_NAME = 'actionName'; // Ключ имени действия контроллера
+    const OPTIONS = 'options'; // Ключ опций пользовательского запроса
+
     /**
      * Различные параметры пользовательского запроса
      *
@@ -18,7 +22,7 @@ class RequestRegistry
 
     /**
      * Возвращает объект класса
-     * 
+     *
      * @return static
      */
     public static function instance()
@@ -27,7 +31,7 @@ class RequestRegistry
         if(is_null($instance)) {
             $instance = new static();
         }
-        
+
         return $instance;
     }
 
@@ -42,7 +46,7 @@ class RequestRegistry
         if (isset($this->values[$key])) {
             return $this->values[$key];
         }
-        
+
         return null;
     }
 
@@ -69,17 +73,17 @@ class RequestRegistry
             $this->setProperty($key, $val);
         }
     }
-    
+
     /**
      * Запрет переопределения и внешнего вызова
      */
     private final function __construct() {}
-    
+
     /**
      * Запрет переопределения и внешнего вызова
      */
     private final function __clone() {}
-    
+
     /**
      * Запрет переопределения и внешнего вызова
      */
