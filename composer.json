@@ -8,7 +8,8 @@
             "Application\\Base\\": "application/base/",
             "Application\\Controller\\": "application/controller/",
             "Application\\DAO\\": "application/dao/",
-            "Application\\View\\": "application/view/"
+            "Application\\View\\": "application/view/",
+            "Application\\Helper\\": "application/helper/"
         }
     }
 }
